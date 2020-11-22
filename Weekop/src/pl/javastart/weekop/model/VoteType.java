@@ -1,5 +1,7 @@
 package pl.javastart.weekop.model;
 
-public class VoteType {
+public enum VoteType {
+	VOTE_UP,
+	VOTE_DOWN;
 
 }
