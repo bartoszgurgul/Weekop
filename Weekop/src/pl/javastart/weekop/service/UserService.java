@@ -17,5 +17,19 @@ public class UserService {
 		UserDAO userDAO = daoFactory.getUserDAO();
 		userDAO.create(user);
 	}
+	
+	public User getUserById(long id) {
+		DAOFactory factory = DAOFactory.getDAOFactory();
+		UserDAO userDAO = factory.getUserDAO();
+		User user = userDAO.read(id);
+		return user;
+	}
+	
+	public User getUserByUsername(String username) {
+		DAOFactory factory = DAOFactory.getDAOFactory();
+		UserDAO userDAO = factory.getUserDAO();
+		User user = userDAO.getUserByUsername(username);
+		return user;
+	}
 
 }
